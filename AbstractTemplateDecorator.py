@@ -9,6 +9,6 @@ class AbstractTemplateDecorator:
         pass
 
     @staticmethod
-    def lenTime(self):
+    def lenTimeinMS(self):
         # Child implements basic function time calculation
         pass
