@@ -45,3 +45,8 @@ class AbstractDecorator:
 
     def __str__(self):
         return f"<AbstractDecorator> &name{self.decoratorName} &func{self.func}"
+
+    # TODO make iterable aspect
+    # nested TODO add 2 methods for iterating
+    # TODO make __next__() method
+    # TODO make __iter__() method
