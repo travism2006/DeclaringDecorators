@@ -7,8 +7,5 @@ class AbstractDecorator:
 
     """
 
-    pass
-
-class GenericDecorator:
     def __init__(self) -> None:
         pass
