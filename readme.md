@@ -11,8 +11,8 @@ decorators include:
 
 ## Installation
 
-Use "pip install decdec" to get the module, and you can use template decorators.
 **(note: the software is not pip ready yet)**
+Use "pip install decdec" to get the module, and you can use template decorators.
 
 ## As of
 10 August 2021

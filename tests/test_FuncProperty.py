@@ -26,4 +26,4 @@ def test_decoratorNameChange():
     assert test_inst1.decoratorName is not None
     assert test_inst1.decoratorName != ""
 
-# test case - compare the bits
+# test case - compare the bits to indicate which decorator is smaller or bigger
