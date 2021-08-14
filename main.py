@@ -1,12 +1,12 @@
 
 # Program to help devs save time making their own decorators
 # Typically in Python decorators may be used to wrap and apply to any functions
-from AbstractDecorator import AbstractDecorator
+from ExtraDecorator import ExtraDecorator
 
-# d = AbstractDecorator()
+# d = ExtraDecorator()
 # print(d.decoratorInfo())
 
-d2 = AbstractDecorator.fromName("MyDecorator")
+d2 = ExtraDecorator.fromName("MyDecorator")
 # print(d2)
 print(d2)
 
