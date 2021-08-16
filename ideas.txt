@@ -1,0 +1,14 @@
+
+Main Intentions/Primary Goal(s):
+ - make boilerplate code for typical cases of using decorators more easily accessible
+ - ID all decorators in a file
+ - make decorators iterable via list in a different way
+ - decorators can be compared (based on function's memory)
+ - decorators can be added (same operation as writing on 2+ lines) or subtracted (aspect included = exclusion if subtraction)
+
+
+Secondary Things/Goals:
+ - css capable -> you can add css styles/html code to have a html file generated using the file .py's html/css code
+ - ID all decorators in multiple files (non-directories)
+ - ID all decorators in a folder (excluding sub-directories)
+ - ID all decorators in a folder (including sub-directories)
