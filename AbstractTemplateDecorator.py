@@ -1,4 +1,4 @@
-class AbstractTemplateDecorator:
+class AbstractBoilerplateDecorator:
     """
         Boilerplate inheritable decorators for common use cases
     """
@@ -12,3 +12,9 @@ class AbstractTemplateDecorator:
     def lenTimeinMS(self):
         # Child implements basic function time calculation
         pass
+
+
+
+# TODO [idea] make class for "with" statement support (e.g. "with ___ as targetVar:")
+
+# TODO [idea] make html and css (engine?) support/feature to generate file.html with styles for showing all decorators
