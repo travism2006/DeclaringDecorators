@@ -1,4 +1,5 @@
 from DeclaringDecorators.ExtraDecorator import ExtraDecorator
+from DeclaringDecorators import decscan
 
 
 #               Basic testsuite
@@ -27,3 +28,9 @@ def test_decoratorNameChange():
     assert test_inst1.decoratorName != ""
 
 # test case - compare the bits to indicate which decorator is smaller or bigger
+
+#               Less Basic testsuite
+#           Less basic test cases go here
+def test_scanGenericPythonFile():
+    results = decscan.decScanFile(r"G:\Python Coding\AutoCreateVirtualEnv.py")
+    assert len(results) > 0
