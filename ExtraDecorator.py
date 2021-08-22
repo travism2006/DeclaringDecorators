@@ -25,17 +25,6 @@ class ExtraDecorator:
         cls.func = someFunctionName
         return cls(funcName=someFunctionName)
 
-    # @property
-    # def func(self):
-    #     return self.func
-    #
-    # @func.setter
-    # def func(self, someFunc):
-    #     if someFunc is not None:
-    #         self.func = someFunc
-    #     else:
-    #         raise ValueError("Given function not valid or does not exist")
-
     def decoratorInfo(self):
         """
             Pretty print decorator data
@@ -54,3 +43,8 @@ class ExtraDecorator:
     # nested TODO add 2 methods for iterating
     # TODO make __next__() method
     # TODO make __iter__() method
+    # TODO make comparisons between any 2 decorators
+
+    # Compare using hamming distance of 2 decorators
+    # find the binary value/representation of 2 decorator names (since python doesn't actually have/use real pointers)
+    # then if the bin() str values are equal length then find their hamming distance
