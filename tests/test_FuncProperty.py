@@ -1,4 +1,5 @@
 from DeclaringDecorators.ExtraDecorator import ExtraDecorator
+from DeclaringDecorators.ExtraDecorator import CompDec
 from DeclaringDecorators import decscan
 
 
@@ -34,3 +35,20 @@ def test_decoratorNameChange():
 def test_scanGenericPythonFile():
     results = decscan.decScanFile(r"G:\Python Coding\AutoCreateVirtualEnv.py")
     assert len(results) > 0
+
+# Test binary comparisons
+def test_binaryHammingDistance():
+    lines = ["@myLog1", "@myLog2"]
+    bitsDiff: int = CompDec.findHamDist_BinaryComp(lines[0], lines[1])
+
+    amtDiff = 0
+    binDec1 = bin(hash(lines[0]))
+    binDec2 = bin(hash(lines[1]))
+    binDec1 = binDec1[binDec1.index('b') + 1:]
+    binDec2 = binDec2[binDec2.index('b') + 1:]
+    for i in zip(binDec1, binDec2):
+        if i[0] != i[1]:
+            print(i)
+            amtDiff += 1
+
+    assert bitsDiff == amtDiff
