@@ -53,9 +53,29 @@ class CompDec:
     """
         Compare decorators in new ways.
     """
+
+    @classmethod
+    def hamDistCall(cls, dec1Name: str, dec2Name: str):
+        if dec1Name == "":
+            raise ValueError("Name of decorator 1 is invalid.")
+        elif dec1Name is not str or dec1Name is None:
+            raise TypeError("Invalid type provided for decorator 1.")
+        elif dec1Name.startswith("0b") or dec1Name.startswith("0x") or dec1Name.startswith("0o"):
+            raise ValueError("Str value provided is not a valid name for a decorator object.")
+
+        if dec2Name == "":
+            raise ValueError("Name of decorator 2 is invalid.")
+        elif dec2Name is not str or dec2Name is None:
+            raise TypeError("Invalid type provided for decorator 2.")
+        elif dec2Name.startswith("0b") or dec2Name.startswith("0x") or dec2Name.startswith("0o"):
+            raise ValueError("Str value provided is not a valid name for a decorator object.")
+
     # Compare using hamming distance of 2 decorators if the bin() str values are equal length
     @classmethod
     def hamDist_PureCharComp(cls, s1: str, s2: str):
+        """
+            Assumes strings of equal length. Calculates the Hamming Distance based on pure char to char comparison.
+        """
         distance = 0
         for i in range(len(s1)):
             if s1[i] != s2[i]:
@@ -63,7 +83,7 @@ class CompDec:
         return distance
 
     @classmethod
-    def findHamDist_BinaryComp(cls, dec1Name: str, dec2Name: str):
+    def hamDist_BinaryComp(cls, dec1Name: str, dec2Name: str):
         """
             Assumes equal length names for the decorators. Calls bin() and find the hamming distance similar to
             hamDist_PureCharComp
