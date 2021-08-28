@@ -4,7 +4,7 @@ class ExtraDecorator:
         consistent features/data and information that all decorators share.
     """
 
-    def __init__(self, decName: str = "", funcName: str = "") -> object:
+    def __init__(self, decName: str = "", funcName: str = ""):
         """
             Optional args: decName, funcName
 
