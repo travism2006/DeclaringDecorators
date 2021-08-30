@@ -4,10 +4,11 @@ from pprint import pprint
 
 def decScanFile(someFilePath: str):
     """
-    Scans a given python file and returns a list of data
+    Scans a given python file and returns a list of data.
+    Other Useful Data:  1. frequency of decorator identified, 2. line number where decorator is found
 
     @type someFilePath: r-string path for locating decorators and properties within
-    @return dataList: list containing number of decorators found, frequency of each decorator
+    @return dataList: list containing number of decorators found, other useful data
     """
 
     if not someFilePath.endswith(".py"):

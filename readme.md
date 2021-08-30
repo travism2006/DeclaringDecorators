@@ -11,15 +11,18 @@ decorators include:
 
 ## Installation
 
-**(note: the software is not pip ready yet)**
-Use "pip install decdec" to get the module, and you can use template decorators.
+**(note: the software is not pip ready/configured yet)**
+Use "pip install decdec" to get the module, and you can start doing new tricks with decorators.
 
 ## As of
-10 August 2021
- * v1.0 started
+30 August 2021
+ * v1.0.2 started
    * Completed features
-     * n/a
+     * decIter
+       * returns an iterable from a function or decorator
+       * **Use Case**: see source code definition for the func. or decorator
    * Features in progress
+     * decScan - 
      * customizable template decorators
      * customizable decorators
      * standard boilerplate decorators (e.g. logging, validation, authentication, etc.)
