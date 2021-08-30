@@ -1,28 +1,25 @@
-import inspect
 from inspect import getsource
-from inspect import findsource
 
 
 def decIter(funcObj):
     """
         Takes a decorator function object and returns an iterable of the line-by-line source code/definition.
     """
-    # temp1 = getsource(funcObj)
-    temp2 = inspect.findsource(funcObj)
+    temp1 = getsource(funcObj).split('\n')
+    # temp2 = inspect.findsource(funcObj) #-----DO NOT USE METHOD findsource(function)
     from pprint import pprint
-    pprint(temp2)
-    print(type(temp2))
-    return temp2
+    print(temp1)
+    print(type(temp1))
+    return temp1
 
 
-def mymain():
-    """Normal input for testing generic numerical function object"""
-
-    def mySum(a: int, b: int):
-        return a + b
-
-    # res = mySum(0, 1)
-    myIter = decIter(mySum)
-
-
-mymain()
+# def mymain():
+#     """Normal input for testing generic numerical function object"""
+#
+#     def mySum(a: int, b: int):
+#         return a + b
+#
+#     myIter = decIter(mySum)
+#
+#
+# mymain()
