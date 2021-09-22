@@ -5,7 +5,7 @@ def decIter(funcObj):
     """
         Takes a decorator function object and returns an iterable of the line-by-line source code/definition.
     """
-    temp1 = getsource(funcObj).split('\n')
+    temp1 = getsource(funcObj).strip().split("\n")
     # temp2 = inspect.findsource(funcObj) #-----DO NOT USE METHOD findsource(function)
     from pprint import pprint
     print(temp1)

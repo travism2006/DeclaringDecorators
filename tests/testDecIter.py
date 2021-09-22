@@ -5,6 +5,10 @@ def test_decoratorIterator():
     def mySum(a: int, b: int):
         return a+b
     listOfLines = decIter(mySum)
+    if type(listOfLines) is list:
+        print("Has __next()__ thus is a iterator/iterable")
+    assert isinstance(listOfLines, list)
+    assert type(listOfLines) is list
     assert listOfLines is not None
 
 def test_decoratorIteratorTwo():
